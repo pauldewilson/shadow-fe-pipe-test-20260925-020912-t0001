@@ -1,1 +1,1 @@
-window.__SHADOW_SIGNUP_CONFIG__ = {"backendUrl": "https://canvaserpcanada-prod-shadow-api.victoriousdesert-5c606a5a.canadacentral.azurecontainerapps.io", "siteKey": "6Lc5Yw0tAAAAAPaZmkmYd0shmySw_A44c8k8opvp", "source": "t0001", "consentVersion": "2026-09-v1", "captchaRequired": true};
+window.__SHADOW_SIGNUP_CONFIG__ = {"backendUrl": "https://canvaserpcanada-prod-shadow-api.victoriousdesert-5c606a5a.canadacentral.azurecontainerapps.io", "siteKey": "6Lc6Yw0tAAAAAE95Jyc4byYR4MraFJvB3JYxABDj", "source": "t0001", "consentVersion": "2026-09-v1", "captchaRequired": true};
