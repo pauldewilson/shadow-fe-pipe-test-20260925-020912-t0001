@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Hello — get notified at launch</title>
+<meta name="description" content="A small new project is taking shape. Leave your email and we'll send a single note when it launches.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="main">
+
+  <section class="intro" aria-labelledby="intro-title">
+    <h1 id="intro-title">Hello.</h1>
+    <p class="lead">A small new project is taking shape. Leave your email and we'll send a single note when it launches.</p>
+    <p class="launch-line">Launching Q4 2026.</p>
+
+    <!-- Inert locally: no action attribute, button type="button", status stays
+         empty. signup.js acts only when a real signup-config.js (deployed
+         variant) defines window.__SHADOW_SIGNUP_CONFIG__. -->
+    <form class="signup" data-signup>
+      <div class="field">
+        <label for="signup-email">Email</label>
+        <input type="email" id="signup-email" name="email" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="signup-first-name">First name (optional)</label>
+        <input type="text" id="signup-first-name" name="first_name" autocomplete="given-name">
+      </div>
+      <button class="signup-button" type="button">Notify me</button>
+      <p class="signup-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="consent">When you submit, we store the email you enter, this page's address and basic technical details (time, IP, browser) — solely to send you the one launch note. Nothing else is collected, and nothing is shared.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© 2026</p>
+</footer>
+
+<script src="signup.js" defer></script>
+<script src="signup-config.js" defer></script>
+</body>
+</html>

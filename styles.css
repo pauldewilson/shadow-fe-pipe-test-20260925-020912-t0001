@@ -1,0 +1,149 @@
+/* t0001 — FE/BE signup integration test page (fe-pipe-test__20260925-020912).
+   Self-contained: system fonts, no imports, no external assets.
+   One accent color; WCAG AA contrast; fluid 320px–1440px+. */
+
+:root {
+  --bg: #f6f5f1;
+  --ink: #26221c;
+  --muted: #57504a;
+  --accent: #2b4a75;
+  --accent-hover: #223c60;
+  --accent-ink: #ffffff;
+  --field-bg: #ffffff;
+  --field-border: #7c746a;
+  --success: #1e5c3d;
+  --error: #8c2f21;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  flex: 1 0 auto;
+  display: grid;
+  place-items: center;
+  padding: clamp(2.5rem, 8vh, 5rem) 1.25rem;
+}
+
+.intro {
+  width: 100%;
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.25rem, 7vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+}
+
+.launch-line {
+  margin: 0 0 2.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Signup form (inert locally; live only via a real signup-config.js) */
+
+.field { margin: 0 0 1.25rem; }
+
+.field label {
+  display: block;
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.field input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.6rem 0.85rem;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--field-bg);
+  border: 1px solid var(--field-border);
+  border-radius: 8px;
+}
+
+.signup-button {
+  min-height: 48px;
+  margin-top: 0.25rem;
+  padding: 0.7rem 1.75rem;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-ink);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.signup-button:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+
+.signup-button[disabled] { opacity: 0.65; cursor: default; }
+
+.signup-status {
+  min-height: 1.6em;
+  margin: 0.9rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.signup-status--success { color: var(--success); }
+.signup-status--error { color: var(--error); }
+
+.consent {
+  margin: 1.75rem 0 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* Visible focus (WCAG 2.2) for links and form controls */
+
+a:focus-visible,
+.field input:focus-visible,
+.signup-button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.field input:focus-visible { border-color: var(--accent); }
+
+/* Footer */
+
+.site-footer {
+  flex-shrink: 0;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
